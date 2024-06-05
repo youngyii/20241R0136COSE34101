@@ -10,6 +10,7 @@ typedef struct{
     int arrival;     // Ready Queue에 도착하는 시간
     int CPU_burst;   // 총 CPU 수행 시간
     int priority;    // 우선순위 값
+    int IO_burst;
 } process;
 
 int process_num;     // process 개수
@@ -79,6 +80,7 @@ void create_process(void){
             info_p[i].arrival = (rand() % 20); // 0~19
             info_p[i].CPU_burst = (rand() % 20) + 1; // 1~20
             info_p[i].priority = (rand() % process_num) + 1; // 1~process개수
+            info_p[i].IO_burst = (rand()%10);
         }
 
         printf("\nEach process's (arrival time / CPU burst time / priority)\n");
