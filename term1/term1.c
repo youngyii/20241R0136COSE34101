@@ -93,10 +93,7 @@ void create_process(void){
             scanf("%d %d %d", &info_p[i].arrival, &info_p[i].CPU_burst, &info_p[i].priority);
         }
     }
-    else {
-        printf("Wrong input! Please restart\n");
-        return 0;
-    }
+    else printf("Wrong input! Please restart\n");
 }
 
 void schedule(void){
